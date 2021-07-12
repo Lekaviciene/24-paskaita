@@ -28,9 +28,7 @@
             amzius: 43,
         };
 
-        console.log (zmogus);
-        console.log (zmogus1);
-
+        
         console.log (zmogus.vardas);
         console.log (zmogus.pavarde);
         console.log (zmogus.amzius);
@@ -42,6 +40,31 @@
         console.log (zmogus1.vardas);
         console.log (zmogus1.pavarde);
         console.log (zmogus1.amzius);
+
+        zmogus.asmensKodas = ("123456789");
+        zmogus1.asmensKodas = ("987654321");
+
+        var tekstas1 = "tekstas";
+
+        zmogus.asmensKodas = tekstas1;
+        zmogus1.asmensKOdas = zmogus.asmensKodas;
+
+
+        console.log (zmogus);
+        console.log (zmogus1);
+
+        var zmogus2 = {
+            vardas: "Vardenis2",
+            pavarde: "Pavardenis2",
+            amzius: 55,
+            // Objekto prisistatymo metodas, kuris grazina varda ir pavarde
+            prisistatyk : function (){
+                return this.vardas + " " + this.pavarde                
+            }
+        }
+
+        console.log (zmogus2.prisistatyk());
+
 
 
 
