@@ -77,6 +77,46 @@
         console.log (zmogus2.prisistatyk());
         console.log (zmogus2.perdavimas(80));
 
+        // dvieju trupmenu sudetis
+
+        //var trupmena = [1, 1, 2];
+        var trupmena = {
+            sveikaDalis : 0,
+            skaitiklis : 1,
+            vardiklis : 2,
+            virskNetaisiklinga : function (){
+                if(this.sveikaDalis > 0 || this.skaitiklis > this.vardiklis){
+                    this.skaitiklis = this.sveikaDalis * this.vardiklis + this.skaitiklis;
+                    this.sveikaDalis = 0;
+                }
+
+            },
+
+            virskTaisyklinga : function (){
+                this.sveikaDalis = parse.Int (this.skaitiklis / this.vardiklis);
+                this.skaitiklis = this.skaitiklis % this.vardiklis;
+
+            }
+        }
+
+        console.log (trupmena);
+        trupmena.virskNetaisiklinga ();
+        console.log (trupmena);
+        trupmena.virskTaisyklinga ();
+        console.log (trupmena);
+
+
+
+
+        //var trupmena1 = {
+           // sveikaDalis : 1,
+            //skaitiklis : 1,
+            //vardiklis : 4,
+            //virskNetaisiklinga : 
+       // }
+
+
+
 
 
 
