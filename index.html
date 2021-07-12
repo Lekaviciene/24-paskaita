@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24 paskaita</title>
 </head>
-<body>
+    
+</body>
+</html>
     <script>
         "use strict";
         //Objektai
@@ -60,10 +62,21 @@
             // Objekto prisistatymo metodas, kuris grazina varda ir pavarde
             prisistatyk : function (){
                 return this.vardas + " " + this.pavarde                
+            },
+
+            perdavimas : function (skaicius){
+                return skaicius*2; 
+        },
+
+            isvesk: function (){
+                console.log (this.vardas + " " + this.pavarde);
+
             }
-        }
+    }
 
         console.log (zmogus2.prisistatyk());
+        console.log (zmogus2.perdavimas(80));
+
 
 
 
